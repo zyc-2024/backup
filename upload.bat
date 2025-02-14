@@ -6,8 +6,9 @@ git commit -m "Add files via git"
 echo ---------------------- [AutoUpload] Pushing ----------------------
 git push >nul 2>&1
 if %errorlevel% equ 0 (
-    echo Success
+    echo [AutoUpload] Success
 ) else (
-    echo Error
+    echo [AutoUpload] Error
+    timeout /t 5
 )
 goto f
