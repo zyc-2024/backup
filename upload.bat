@@ -4,11 +4,11 @@ echo ----------------------[AutoUpload] Commiting----------------------
 git add -A
 git commit -m "Add files via git"
 echo ---------------------- [AutoUpload] Pushing ----------------------
-if "git push"; then
-    echo [AutoUpload] Succeed!
-else
-    echo [AutoUpload] Failed!
-    timeout /t 5
-fi
+git push >nul 2>&1
+if %errorlevel% equ 0 (
+    echo Success
+) else (
+    echo Error
+)
 cls
 goto f
