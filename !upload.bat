@@ -9,7 +9,7 @@ git push 2>%%ifSussess
 if %%i equ 0 (
     echo [AutoUpload] Success
 ) else (
-    echo [AutoUpload] Error: %ifSussess%
+    echo [AutoUpload] Error: %%ifSussess
     timeout /t 5
 )
 cls
