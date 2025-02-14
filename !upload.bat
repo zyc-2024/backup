@@ -4,11 +4,12 @@ echo ----------------------[AutoUpload] Commiting----------------------
 git add -A
 git commit -m "Add files via git"
 echo ---------------------- [AutoUpload] Pushing ----------------------
-git push 2>%%i
+set ifSussess = 0
+git push 2>%ifSussess%
 if %%i equ 0 (
     echo [AutoUpload] Success
 ) else (
-    echo [AutoUpload] Error: %i%
+    echo [AutoUpload] Error: %ifSussess%
     timeout /t 5
 )
 cls
