@@ -5,7 +5,7 @@ git add -A
 git commit -m "Add files via git"
 echo ---------------------- [AutoUpload] Pushing ----------------------
 
-git push 2 | set ifSussess = %1
+git push | set ifSussess = %1
 if %%i equ 0 (
     echo [AutoUpload] Success
 ) else (
