@@ -8,7 +8,7 @@ git push 2>%%i
 if %%i equ 0 (
     echo [AutoUpload] Success
 ) else (
-    echo [AutoUpload] Error: %%i
+    echo [AutoUpload] Error: %i%
     timeout /t 5
 )
 cls
