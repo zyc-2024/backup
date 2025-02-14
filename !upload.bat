@@ -4,8 +4,8 @@ echo ----------------------[AutoUpload] Commiting----------------------
 git add -A
 git commit -m "Add files via git"
 echo ---------------------- [AutoUpload] Pushing ----------------------
-set ifSussess = 0
-git push 2>%%ifSussess
+
+git push 2 | set ifSussess = %1
 if %%i equ 0 (
     echo [AutoUpload] Success
 ) else (
