@@ -11,4 +11,5 @@ if %errorlevel% equ 0 (
     echo [AutoUpload] Error
     timeout /t 5
 )
+cls
 goto f
