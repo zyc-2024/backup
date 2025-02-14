@@ -6,10 +6,10 @@ git commit -m "Add files via git"
 echo ---------------------- [AutoUpload] Pushing ----------------------
 
 git push | set ifSussess = %1
-if %%i equ 0 (
+if %errorlevel% equ 0 (
     echo [AutoUpload] Success
 ) else (
-    echo [AutoUpload] Error: %ifSussess%
+    echo [AutoUpload] Error %ifSussess%
     timeout /t 5
 )
 cls
