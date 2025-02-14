@@ -10,5 +10,4 @@ if %errorlevel% equ 0 (
 ) else (
     echo Error
 )
-cls
 goto f
